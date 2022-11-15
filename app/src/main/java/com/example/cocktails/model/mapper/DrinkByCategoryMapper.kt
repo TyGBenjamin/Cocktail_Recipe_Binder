@@ -7,7 +7,7 @@ import com.example.cocktails.model.entity.DrinkByCategory
 
 
 /**
- * Origin mapper for mapping DTO to data class objects.
+ * Drink Category Mapper mapper for mapping DTO to data class objects.
  *
  * @constructor Create empty Origin mapper
  */

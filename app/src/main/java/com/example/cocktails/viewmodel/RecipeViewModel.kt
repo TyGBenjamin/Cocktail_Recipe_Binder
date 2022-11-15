@@ -12,14 +12,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class RecipeViewModel : ViewModel() {
-
     private val repo = RepositoryImpl
-
     private val _recipe: MutableStateFlow<Resource<List<SpecificRecipe>>> = MutableStateFlow(
         Resource.Loading
     )
     val recipe = _recipe.asStateFlow()
-
 
     fun getDetailRecipe(list: String) {
         Log.d(TAG, "getDetailRecipe called")

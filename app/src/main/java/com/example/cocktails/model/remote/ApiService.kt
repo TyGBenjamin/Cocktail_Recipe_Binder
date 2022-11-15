@@ -26,7 +26,6 @@ interface ApiService {
 
 
     companion object {
-        private const val CATEGORY_LIST = "categories.php"
         private const val LIST_ENDPOINT = "list.php"
         private const val DRINK_IN_CATEGORY = "filter.php"
         private const val RECIPE_ENDPOINT = "search.php"

@@ -10,6 +10,5 @@ sealed class Screens(val route: String){
         const val homeScreen: String = "home_screen"
         const val drinkScreen: String = "drink_screen"
         const val recipeScreen: String = "recipe_screen/{drinkString}"
-        const val charLocation: String = "location/{id}"
     }
 }

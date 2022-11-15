@@ -46,8 +46,7 @@ fun NavGraph(list: List<Drink>) {
                 )
             }
         }
-//        "profile/{userId}",
-//        arguments = listOf(navArgument("userId") { type = NavType.StringType })
+
         composable(
             Screens.Constants.recipeScreen,
             arguments = listOf(navArgument("drinkString") {
@@ -56,18 +55,6 @@ fun NavGraph(list: List<Drink>) {
         ) { backStack ->
             val recipeList = recipeViewModel.recipe.collectAsState().value
             println("THIS IS WHERE $recipeList IS")
-//            when (recipeList) {
-//                is Resource.Error -> ErrorIndicator()
-//                Resource.Loading -> ProgressIndicator()
-//                is Resource.Success -> RecipeList(
-//                    recipes = recipeList.data,
-//                    navigate = {
-//                        navController.navigate(Screens.Constants.homeScreen)
-//                    },
-//                    strDrink = backStack.arguments?.getString("drinkString")!!,
-//                    viewModel = recipeViewModel
-//                )
-//            }
             RecipeList(
                 recipes = listOf(),
                 navigate = {

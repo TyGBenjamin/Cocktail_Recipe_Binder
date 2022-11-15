@@ -8,7 +8,7 @@ import com.example.cocktails.model.entity.SpecificRecipe
 import com.google.gson.annotations.SerializedName
 
 /**
- * Origin mapper for mapping DTO to data class objects.
+ * Specific Recipe Mapper mapper for mapping DTO to data class objects.
  *
  * @constructor Create empty Origin mapper
  */

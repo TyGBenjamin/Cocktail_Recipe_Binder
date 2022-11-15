@@ -23,7 +23,6 @@ fun DrinkByCategoryScreen(
     recipeViewModel: RecipeViewModel = viewModel(),
 ) {
     Column() {
-
         LazyColumn(modifier = Modifier.padding(5.dp)) {
             items(items = drinks) { drink ->
                 CharCardCategory(
@@ -34,20 +33,15 @@ fun DrinkByCategoryScreen(
                         recipeViewModel.getDetailRecipe(drink.strDrink)
                         navController.navigate("recipe_screen/${drink.strDrink}")
                     }
-
                 )
                 Button(onClick = { navController.navigate(Screens.Constants.homeScreen) },
                     modifier = Modifier
                         .align(alignment = Alignment.CenterHorizontally)
                         .padding(horizontal = 140.dp)) {
                     Text(text = "Home")
-
                 }
             }
-
         }
-
     }
-
 }
 

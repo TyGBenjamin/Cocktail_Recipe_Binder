@@ -49,7 +49,6 @@ fun HomeScreen(
                 )
             }
         }
-
     }
 }
 
@@ -126,7 +125,6 @@ fun CharCardCategory(
         .fillMaxWidth()
         .background(color = Color.Black)
         .clickable {
-//            viewModel.getDetailRecipe(drinkByCategory.strDrink)
             println("Card has been   HERE ON NEW PAGE CLICKED")
             navigate()
         }
