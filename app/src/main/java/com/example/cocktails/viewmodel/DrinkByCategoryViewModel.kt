@@ -10,12 +10,21 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
+/**
+ * Drink by category view model.
+ *
+ * @constructor Create empty Drink by category view model
+ */
 class DrinkByCategoryViewModel: ViewModel() {
     private val repo = RepositoryImpl
     private val _drinkList: MutableStateFlow<Resource<List<DrinkByCategory>>> = MutableStateFlow(Resource.Loading)
     val drinkList = _drinkList.asStateFlow()
 
-
+    /**
+     * Get drink by category.
+     *
+     * @param list
+     */
     fun getDrinkByCategory(list:String ="cocktail"){
         viewModelScope.launch {
             _drinkList.value = repo.getSelectedCategoryDrinks(list)

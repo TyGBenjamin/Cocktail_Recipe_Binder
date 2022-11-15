@@ -11,6 +11,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
+/**
+ * Recipe view model.
+ *
+ * @constructor Create empty Recipe view model
+ */
 class RecipeViewModel : ViewModel() {
     private val repo = RepositoryImpl
     private val _recipe: MutableStateFlow<Resource<List<SpecificRecipe>>> = MutableStateFlow(
@@ -18,6 +23,11 @@ class RecipeViewModel : ViewModel() {
     )
     val recipe = _recipe.asStateFlow()
 
+    /**
+     * Get detail recipes.
+     *
+     * @param list
+     */
     fun getDetailRecipe(list: String) {
         Log.d(TAG, "getDetailRecipe called")
         viewModelScope.launch {

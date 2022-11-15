@@ -9,6 +9,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
+/**
+ * Category list view model.
+ *
+ * @constructor Create empty Category list view model
+ */
 class CategoryListViewModel: ViewModel() {
     private val repo = RepositoryImpl
     private val _categoryList: MutableStateFlow<Resource<List<Drink>>> = MutableStateFlow(Resource.Loading)
@@ -18,6 +23,11 @@ class CategoryListViewModel: ViewModel() {
         getCategoryList(list ="list")
     }
 
+    /**
+     * Get category list function.
+     *
+     * @param list
+     */
     fun getCategoryList(list:String = "list"){
         viewModelScope.launch {
             _categoryList.value = repo.getCategoryList(list)
